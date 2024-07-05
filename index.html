@@ -1,0 +1,96 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aduke Beauty Lounge</title>
+   <style>
+    h1 {text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 150%;
+    color: aliceblue;
+    background:-webkit-linear-gradient(maroon, magenta);
+    border-radius: 10px;
+   width: 500px;
+    position: relative; left: 450px;}
+    p {font-family: cursive;
+    text-align: justify;}
+    strong {font-style: italic;}
+    h2 {font-family: Georgia, 'Times New Roman', Times, serif; color:crimson; position: relative; text-align: center;}
+    form {text-align: center;
+    margin-top: 0px;}
+    input, textarea {margin-bottom: 10px;
+    padding: 5px 5px 10px;
+    border: 1px solid lightpink; border-radius: 5px;
+    background-color: beige;
+    color: steelblue;
+    width: 20%; outline: none;}
+    .submit {background-color: mediumvioletred; font-family: cursive; color: aliceblue;
+    padding: 12px 45px;
+    cursor: pointer;
+    font-weight: bold; outline: none; border: none;}
+    .submit:hover {background-color: maroon;}
+    
+   </style>
+</head>
+<body>  
+    <!--heading starts here-->
+    <div class="heading">
+    <img src="adk.png" width="100" height="100">
+    <h1><span>BEAUTY PRODUCTS AND SERVICES</span></h1>
+    </div>
+    <!--heading ends here-->
+
+    <!--body starts here-->
+    <div class="body">
+        <p>Welcome to Aduke Beauty Lounge. Here, we help you achieve a high level of confidence in your overall beauty journey. 
+            Taking the right care of yourself is essential and very important, so, we offer a wide variety of services to help you bring out the <strong>AWESOME</strong> in you.
+            Our high performing professional staff are easily accessible to attend to your beauty needs.
+        </p>
+        <p>Kindly sign up for our weekly news letter, so you are informed of new developments in the beauty world as it relates to you.
+            And of course, you want to be the first to know when we have something amazing coming up for you!
+        </p>
+    </div>
+    <!--body ends here-->
+
+    <!--form section starts here-->
+    <section>
+        <h2>Sign Up for Our News Letter</h2>
+        <form id="logForm">
+            <input name="name" placeholder="Name" type="text"  required ><br>
+            <input name="email" placeholder="Email" type="email"  required><br>
+            <input name="phone number" placeholder="Phone Number" type="n"  required><br>
+            <input type="submit" value="SEND" class="submit">
+        </form>
+    </section>
+
+    <h2 id="output">...</h2>
+
+
+
+    <!--form section ends here-->
+
+    <script>
+        let loginData = document.getElementById("logForm");
+
+        
+
+        loginData.addEventListener("submit", (e)=>{
+            e.preventDefault();
+
+            let name = document.getElementsByName("name");
+
+            let email = document.getElementsByName("email");
+            let phone_number = document.getElementsByName("phone number");
+
+            document.getElementById("output").innerHTML = "Hello My name is "+ name[0].value + " and you can call me on : " + phone_number[0].value + " or send a mail at " + email[0].value;
+
+            // console.log(name[0].value);
+            // console.log(email[0].value);
+            // console.log(phone_number[0].value);
+            //console.log('The submit was successful for ' + email.values);
+        })
+
+
+
+    </script>
+</body>
+</html>
